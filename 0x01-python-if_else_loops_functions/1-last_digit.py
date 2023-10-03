@@ -9,7 +9,7 @@ else:
     dig = number % 10
 
 if dig == 0:
-    print(f"Last digit of {number:d} is {last_digit:d} and is 0")
+    print(f"Last digit of {number:d} is {dig:d} and is 0")
 elif dig < 6 and dig != 0:
     print(f"Last digit of {number:d} is {dig:d} and is less than 6 and not 0")
 else:

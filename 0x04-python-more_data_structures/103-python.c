@@ -31,7 +31,7 @@ void print_python_bytes(PyObject *p)
 		lmt = 10;
 	else
 	{
-		lmt = len + 1
+		lmt = len + 1;
 	}
 
 	printf(" first %ld bytes:", lmt);

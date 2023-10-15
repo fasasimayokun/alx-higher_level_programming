@@ -42,7 +42,7 @@ void print_python_bytes(PyObject *p)
 		else
 			printf(" %02x", 256 + st[n]);
 	}
-	printf("\n")
+	printf("\n");
 }
 
 /**

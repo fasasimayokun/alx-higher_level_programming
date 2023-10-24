@@ -9,6 +9,10 @@ class Square:
 
         Args:
             size: the size of the square instance
+
+        Raises:
+            TypeError: if the size is not integer
+            ValueError: if the size is less than 0
         """
         if not isinstance(size, int):
             raise TypeError("size must be an interger")

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-
+"""the square class template"""
 
 class Square:
-    """a square class template"""
+    """a square class"""
     def __init__(self, size=0):
         """initializes the size attr of the square class instance"""
         self.size = size

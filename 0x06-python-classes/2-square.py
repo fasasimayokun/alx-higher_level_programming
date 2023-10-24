@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""the square classs template"""
 
 
 class Square:

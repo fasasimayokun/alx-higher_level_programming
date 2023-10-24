@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""the square class template"""
+
 
 class Square:
     """a square class template"""

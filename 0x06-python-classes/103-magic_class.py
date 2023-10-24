@@ -6,13 +6,13 @@ import math
 
 class MagicClass:
     """the circle class template"""
-    def __inti__(self, radius=0):
+    def __init__(self, radius=0):
         """initializes the circle class instance
         Arg:
             radius (int or float): the radius of a new magic class
         """
         self.__radius = 0
-        if type(radius) is not int and type(radius) is not float:
+        if not isinstance(radius, float) and not isinstance(radius, int):
             raise TypeError("radius must be a number")
         self.__radius = radius
 

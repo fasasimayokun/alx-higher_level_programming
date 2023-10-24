@@ -6,7 +6,12 @@ class Square:
     """a square class template"""
     def __init__(self, size=0, position=(0, 0)):
         """initializes the size and position tuple
-        attr of the square instance"""
+        attr of the square instance
+
+        Args:
+            size (int): the size of the square
+            position (int, int): the positon of the instance square
+        """
         self.size = size
         self.position = position
 
@@ -33,7 +38,7 @@ class Square:
         if (not isinstance(value, tuple) or len(value) != 2
                 or not all(isinstance(nm, int) for nm in value) or
                 not all(nm >= 0 for nm in value)):
-            raise TypeError("position must be a tuple of 2 position integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):

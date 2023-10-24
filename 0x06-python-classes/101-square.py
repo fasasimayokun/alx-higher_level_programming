@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""the square class template"""
 
 
 class Square:
-    """a square class template"""
+    """a square class"""
     def __init__(self, size=0, position=(0, 0)):
         """initializes the size and position tuple
         attr of the square instanc.

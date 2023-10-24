@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """the square class template"""
 
+
 class Square:
     """a square class template"""
     def __init__(self, size=0):

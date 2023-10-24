@@ -21,7 +21,7 @@ void print_python_float(PyObject *p)
 	}
 
 	doub = ((PyFloatObject *)p)->ob_fval;
-	printf("  value: %s\n", PyOS_double_to_string(d, 'r',
+	printf("  value: %s\n", PyOS_double_to_string(doub, 'r',
 				0, Py_DTSF_ADD_DOT_0, NULL));
 }
 

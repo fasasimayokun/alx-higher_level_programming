@@ -11,11 +11,13 @@ def init_board(n):
     [row.append(' ') for nm in range(n) for row in board]
     return board
 
+
 def board_deepcopy(board):
     """returns a deepcopy of the chessboard"""
     if isinstance(board, list):
         return list(map(board_deepcopy, board))
     return (board)
+
 
 def get_res(board):
     """return the list of lists representation of a solved chessboard"""
@@ -26,6 +28,7 @@ def get_res(board):
                 solu.append([row, col])
                 break
     return (solu)
+
 
 def xout(board, row, col):
     """x out spots on the chessboard all spots
@@ -41,34 +44,34 @@ def xout(board, row, col):
     # x out all backward spots
     for bk in range(col - 1, -1, -1):
         board[row][bk] = 'x'
-    #x out all spots below
+    # x out all spots below
     for rw in range(row + 1, len(board)):
         board[rw][col] = 'x'
-    #x out al spots top
+    # x out al spots top
     for tp in range(row - 1, -1, -1):
         board[tp][col] = 'x'
-    #x out all spots diagonally bottom ot the right
+    # x out all spots diagonally bottom ot the right
     cl = col + 1
     for rw in range(row + 1, len(board)):
         if cl >= len(board):
             break
         board[rw][cl] = 'x'
         cl += 1
-    #x out all spots diagonally top left
+    # x out all spots diagonally top left
     cl = col - 1
     for rw in range(row - 1, -1, -1):
         if cl < 0:
             break
         board[rw][cl]
         cl -= 1
-    #x out all spots diagonally top right
+    # x out all spots diagonally top right
     cl = col + 1
     for rw in range(row - 1, -1, -1):
         if cl >= len(board):
             break
         board[rw][cl] = 'x'
         cl += 1
-    #x out all spots diagonally bottom left
+    # x out all spots diagonally bottom left
     cl = col - 1
     for rw in range(row + 1, len(board)):
         if cl < 0:
@@ -97,7 +100,7 @@ def recursive_sol(board, row, queens, res):
             temp_board[row][col] = 'Q'
             xout(temp_board, row, col)
             res = recursive_sol(temp_board, row + 1,
-                                        queens + 1, res)
+                                queens + 1, res)
     return res
 
 

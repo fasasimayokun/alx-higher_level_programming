@@ -10,7 +10,7 @@
  * @p: the addrs of pyobject structure
  * Return: void(nothing)
  */
-void print_python_string(PyObject p)
+void print_python_string(PyObject *p)
 {
 	wprintf(L"[:] string object info\n");
 	if (strcmp(p->ob_type->tp_name, "str"))

@@ -9,7 +9,7 @@ def init_board(n):
     board = []
     [board.append([]) for nm in range(n)]
     [row.append(' ') for nm in range(n) for row in board]
-    return board
+    return (board)
 
 
 def board_deepcopy(board):
@@ -92,7 +92,7 @@ def recursive_sol(board, row, queens, res):
     """
     if queens == len(board):
         res.append(get_res(board))
-        return res
+        return (res)
 
     for col in range(len(board)):
         if board[row][col] == ' ':
@@ -101,7 +101,7 @@ def recursive_sol(board, row, queens, res):
             xout(temp_board, row, col)
             res = recursive_sol(temp_board, row + 1,
                                 queens + 1, res)
-    return res
+    return (res)
 
 
 if __name__ == '__main__':

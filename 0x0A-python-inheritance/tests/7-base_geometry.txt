@@ -69,22 +69,22 @@ integer_validator method float.x value:
 integer_validator method string value:
     >>> bg.integer_validator("Far", "far")
     Traceback (most recent call last):
-    TypeError: Bar must be an integer
+    TypeError: Far must be an integer
 
 integer_validator method bool value:
-    >>> bg.integer_validator("bar", True)
+    >>> bg.integer_validator("cat", True)
     Traceback (most recent call last):
-    TypeError: zar must be an integer
+    TypeError: cat must be an integer
 
 integer_validator method list value:
     >>> bg.integer_validator("g", [1])
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: g must be an integer
 
 integer_validator method None value:
     >>> bg.integer_validator("koo", None)
     Traceback (most recent call last):
-    TypeError: foo must be an integer
+    TypeError: koo must be an integer
 
 integer_validator method 0 value:
     >>> bg.integer_validator("key", 0)
@@ -111,9 +111,9 @@ integer_validator method empty string:
 integer_validator method tuple:
     >>> bg.integer_validator("Doo", (2, 2))
     Traceback (most recent call last):
-    TypeError: Foo must be an integer
+    TypeError: Doo must be an integer
 
 integer_validator method dic:
     >>> bg.integer_validator("Doo", {1, 2})
     Traceback (most recent call last):
-    TypeError: Foo must be an integer
+    TypeError: Doo must be an integer

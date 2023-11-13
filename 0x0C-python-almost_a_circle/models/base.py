@@ -68,8 +68,8 @@ class Base:
         if not os.path.isfile(fle):
             return []
         with open(fle, 'r', encoding='utf-8') as fl:
-            return [cls.create(**dict_)
-                    for dict_ in cls.from_json_string(fl.read())]
+            return [cls.create(**dic_)
+                    for dic_ in cls.from_json_string(fl.read())]
 
     @classmethod
     def save_to_file_csv(cls, list_objs):

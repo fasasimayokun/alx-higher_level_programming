@@ -3,7 +3,7 @@
 import unittest
 from models.base import Base
 from models.square import Square
-from models.Rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class TestBase(unittest.TestCase):
@@ -218,7 +218,7 @@ were given"
         Rectangle.save_to_file([r1, r2])
 
         with open("Rectangle.json", "r") as file:
-            self.assertEqual(len(file.read()), 105)
+            self.assertEqual(len(file.read()), 107)
 
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as file:
@@ -235,7 +235,7 @@ were given"
         r2 = Rectangle(2, 4)
         Rectangle.save_to_file([r2])
         with open("Rectangle.json", "r") as file:
-            self.assertEqual(len(file.read()), 52)
+            self.assertEqual(len(file.read()), 53)
 
         Square.save_to_file(None)
         with open("Square.json", "r") as file:
@@ -252,7 +252,7 @@ were given"
         r2 = Square(1)
         Square.save_to_file([r2])
         with open("Square.json", "r") as file:
-            self.assertEqual(len(file.read()), 38)
+            self.assertEqual(len(file.read()), 39)
 
         # ----------------- Tests for #18 ------------------------
     def test_J_create(self):

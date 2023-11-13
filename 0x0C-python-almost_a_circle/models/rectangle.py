@@ -58,7 +58,6 @@ class Rectangle(Base):
         self.num_check("y", value)
         self.__y = value
 
-
     def num_check(self, name, value, eq=True):
         '''Method for validating the value.'''
         if type(value) != int:
